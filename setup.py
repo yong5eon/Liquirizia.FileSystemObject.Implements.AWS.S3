@@ -34,9 +34,8 @@ setup(
 		'Application Framework :: Liquirizia :: FileSystemObject :: AWS :: S3',
 	],
 	install_requires=[
-		'Liquirizia@git+https://github.com/team-of-mine-labs/Liquirizia.git',
+		'Liquirizia@git+https://github.com/yong5eon/Liquirizia.git',
 		'boto3>=1.18.12',
 	],
-	url='https://github.com/team-of-mine-labs/Liquirizia.FileSystemObject.Implements.AWS.S3',
 	python_requires='>=3.8'
 )

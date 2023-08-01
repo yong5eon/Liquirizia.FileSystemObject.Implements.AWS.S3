@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from Liquirizia.FileSystemObject.FileObject import FileObject as FileObjectBase
-from Liquirizia.FileSystemObject.Error import *
+from Liquirizia.FileSystemObject import FileObject as FileObjectBase
+from Liquirizia.FileSystemObject.Errors import *
 
 from botocore.exceptions import ClientError
 
@@ -11,9 +11,8 @@ __all__ = (
 
 
 class FileObject(FileObjectBase):
-	"""
-	File Object Class for Amazon Web Service S3
-	"""
+	"""File Object Class for Amazon Web Service S3"""
+
 	def __init__(self, fso):
 		self.fso = fso
 		self.fo = None

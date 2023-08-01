@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from Liquirizia.FileSystemObject.FileSystemObject import FileSystemObject as FileSystemObjectBase
-from Liquirizia.FileSystemObject.Error import *
+from Liquirizia.FileSystemObject import FileSystemObject as FileSystemObjectBase
+from Liquirizia.FileSystemObject.Errors import *
 
 from .FileObject import FileObject
 from .FileSystemObjectConfiguration import FileSystemObjectConfiguration
@@ -16,9 +16,8 @@ __all__ = (
 
 
 class FileSystemObject(FileSystemObjectBase):
-	"""
-	File Object Class for Amazon Web Service S3
-	"""
+	"""File Object Class for Amazon Web Service S3"""
+
 	def __init__(self, conf: FileSystemObjectConfiguration):
 		self.conf = conf
 		self.bucket = None

@@ -36,7 +36,3 @@ if __name__ == '__main__':
 		print(f.read())
 		f.close()
 ```
-
-## Depends
-* Liquirizia - https://github.com/team-of-mine-labs/Liquirizia
-* boto3

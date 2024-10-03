@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
 
-from Liquirizia.FileSystemObject import FileSystemObjectHelper
-from Liquirizia.FileSystemObject.Implements.AWS.S3 import FileSystemObject, FileSystemObjectConfiguration
+from Liquirizia.FileSystemObject import Helper
+from Liquirizia.FileSystemObject.Implements.AWS.S3 import Connection, Configuration
 from Liquirizia.System.Util import GenerateUUID
 
 if __name__ == '__main__':
-	FileSystemObjectHelper.Set(
+	Helper.Set(
 		'Sample',
-		FileSystemObject,
-		FileSystemObjectConfiguration(
+		Connection,
+		Configuration(
 			bucket='YOUR_BUCKET',
 			token='YOUR_TOKEN',
 			secret='YOUR_TOKEN_SECRET',
@@ -17,7 +17,7 @@ if __name__ == '__main__':
 		)
 	)
 
-	fso = FileSystemObjectHelper.Get('Sample')
+	fso = Helper.Get('Sample')
 	path = 'YOUR_PATH'.format(GenerateUUID())
 	fso.create(path, format='text/plain', charset='utf-8', filename='Sample.txt')
 

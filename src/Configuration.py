@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 
-from Liquirizia.FileSystemObject import FileSystemObjectConfiguration as FileSystemObjectConfigurationBase
+from Liquirizia.FileSystemObject import Configuration as BaseConfiguration
 
 __all__ = (
-	'FileSystemObjectConfiguration'
+	'Configuration'
 )
 
 
-class FileSystemObjectConfiguration(FileSystemObjectConfigurationBase):
+class Configuration(BaseConfiguration):
 	"""File System Object Configuration Class for Amazon Web Service S3"""
 
 	def __init__(self, bucket, token, secret, region, version=None):

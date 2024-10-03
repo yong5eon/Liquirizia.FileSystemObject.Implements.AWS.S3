@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 
-from .FileSystemObjectConfiguration import FileSystemObjectConfiguration
-from .FileSystemObject import FileSystemObject
-from .FileObject import FileObject
+from .Configuration import Configuration
+from .Connection import Connection
+from .File import File
 
 __all__ = (
-	'FileSystemObjectConfiguration',
-	'FileSystemObject',
-	'FileObject',
+	'Configuration',
+	'Connection',
+	'File',
 )

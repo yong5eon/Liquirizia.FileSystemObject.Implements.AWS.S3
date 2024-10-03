@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 
-from Liquirizia.FileSystemObject import FileSystemObject as FileSystemObjectBase
+from Liquirizia.FileSystemObject import Connection as BaseConnection
 from Liquirizia.FileSystemObject.Errors import *
 
-from .FileObject import FileObject
-from .FileSystemObjectConfiguration import FileSystemObjectConfiguration
+from .File import File
+from .Configuration import Configuration
 
 from boto3 import session
 from botocore.client import Config
@@ -15,10 +15,10 @@ __all__ = (
 )
 
 
-class FileSystemObject(FileSystemObjectBase):
+class Connection(BaseConnection):
 	"""File Object Class for Amazon Web Service S3"""
 
-	def __init__(self, conf: FileSystemObjectConfiguration):
+	def __init__(self, conf: Configuration):
 		self.conf = conf
 		self.bucket = None
 		self.client = None
